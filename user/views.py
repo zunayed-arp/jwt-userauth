@@ -19,12 +19,10 @@ class RegisteraAPIView(APIView):
         # serializer.is_valid(raise_exception=True)
         return Response(serializer.data)
     
-
 class LoginAPIView(APIView):
     def post(self,request):
         email = request.data['email']
         password = request.data['password']
-        
         
         user = User.objects.filter(email=email).first()
         
