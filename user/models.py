@@ -9,3 +9,6 @@ class User(AbstractUser):
     
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
+    
+    # class Meta:
+    #     db_table = 'users_profile'
